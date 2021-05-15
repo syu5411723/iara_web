@@ -2,18 +2,17 @@
 import styled from 'styled-components'
 import Router from '../../router/Router'
 
-const MainContainer = styled.main`
-    width: 100vw;
-    height: 80vh;
-    position:relative;
+const MainContainer = styled.div`
+    width: 100%;
+    height: 80%;
+
 `
 
 const Main = () => {
     return (
         <>
-            <MainContainer>
+            <MainContainer></MainContainer>
                 <Router />
-            </MainContainer>
         </>
     )
 }

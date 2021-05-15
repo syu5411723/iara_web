@@ -10,12 +10,15 @@ export default createGlobalStyle`
     }
     a{
         text-decoration:none;
+        /* color:#000; */
     }
     li{
         list-style:none;
     }
     body{ 
         background-color: #FFF2E0;
+        /* background-color: #000; */
+        
         color: #292929;
         font-family: Roboto,sans-serif;
         font-weight: 300;
@@ -23,38 +26,41 @@ export default createGlobalStyle`
         width: 100vw;
     }
     .cursor {
+
+        width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition:all 150ms ease;
+  transition-property:opacity, background-color, transform, mix-blend-mode;
     /* width: 40px;
     height: 40px;
-    background-color: #000;
+    border:1px solid #fff;
+    background-color: #fff;
     border-radius: 100%;
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
-    transition: all 0.5s ease;
-    transition-property: opacity, background-color, transform, mix-blend-mode; */
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: -50%;
-    left: -50%;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: transform 0.2s ease-out;
-    mix-blend-mode: difference;
-    z-index: 1000;
-    pointer-events: none;
+    transition: all  0.2s ease;
+    transition-property: opacity, transform, background-color, mix-blend-mode; */
     }
     .cursor--hidden {
         opacity: 0;
     }
     .cursor--clicked {
         transform: translate(-50%,-50%) scale(0.9);
-        background-color: #000;
+        background-color: #fefefe;
     }
     .cursor--link-hovered {
         transform:translate(-50%, -50%) scale(3);
-        background-color:#000;
+        /* background-color:#fff; */
     }
 `

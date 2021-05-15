@@ -10,7 +10,7 @@ const TitleWrapper = styled.div`
     position:absolute;
     bottom:10%;
     left:20%;
-    display:flex;
+
 `
 
 

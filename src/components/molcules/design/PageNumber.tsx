@@ -14,10 +14,10 @@ const PageWrapper = styled.div`
     z-index:10;
 
 `
-const TextWrapper = styled(motion.div)`
+const TextWrapper = styled.div`
 
 `
-const PageText = styled.p`
+const PageText = styled(motion.p)`
     font-size: 18px;
     font-weight: bold;
 `
@@ -33,7 +33,7 @@ const Number = styled.p`
 `
 
 const pageTextV = {
-    hidden: { opacity: 0, y: "-20px" },
+    hidden: { opacity: 0, },
     visible: { opacity: 1, y: "0px", transition: { duration: 0.4 } },
 }
 
@@ -41,13 +41,13 @@ const PageNumber = ({ pageNumber }) => {
     return (
         <>
             <PageWrapper>
-                <TextWrapper
-                    variants={pageTextV}
-                    initial="hidden"
-                    animate="visible"
-                    exit={{opacity:0, y:"20px", transition:{duration:0.4}}}
-                >
-                    <PageText>{pageNumber}</PageText>
+                <TextWrapper>
+                    <PageText
+                        variants={pageTextV}
+                        initial="hidden"
+                        animate="visible"
+                        exit={{ opacity: 0, transition: { duration: 0.4 } }}
+                    >{pageNumber}</PageText>
                 </TextWrapper>
                 <Line />
                 <Number>7</Number>
