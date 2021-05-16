@@ -1,5 +1,7 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import PrevArrow from '../../atoms/design/PrevArrow'
 
 import Arrow from '../../molcules/design/Arrow'
 import PageNumber from '../../molcules/design/PageNumber'
@@ -10,7 +12,6 @@ const Container = styled.div`
 
 `
 
-
 const Book = () => {
     return (
         <>
@@ -18,7 +19,6 @@ const Book = () => {
             <BookSubTitle />
             <BookTitle />
             <PageNumber pageNumber="1" />
-            <Arrow prevLink="/library" nextLink="/filtro" />
         </Container>
         </>
     )

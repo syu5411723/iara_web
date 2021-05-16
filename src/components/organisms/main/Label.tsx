@@ -20,7 +20,6 @@ const Label = () => {
             <LabelSubTitle />
             <LabelTitle />
             <PageNumber pageNumber="4" /> 
-            <Arrow  prevLink="/museum" nextLink="/park_it" />
         </Container>
         </>
     )

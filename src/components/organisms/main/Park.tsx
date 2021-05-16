@@ -1,5 +1,6 @@
 ﻿import { PanSession } from 'framer-motion/types/gestures/PanSession'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Arrow from '../../molcules/design/Arrow'
@@ -11,7 +12,6 @@ const Container = styled.div`
 
 `
 
-
 const Park = () => {
     return (
         <>
@@ -19,7 +19,6 @@ const Park = () => {
             <ParkSubTitle />
             <ParkTitle />
             <PageNumber pageNumber="5" />
-            <Arrow  prevLink="/label" nextLink="/expo" />
         </Container>
         </>
     )

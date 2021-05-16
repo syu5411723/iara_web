@@ -1,4 +1,5 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import HeaderInner from '../molcules/header/HeaderInner'
 
@@ -7,6 +8,9 @@ const HeaderContainer = styled.header`
     display:flex;
     align-items:flex-end;
 ` 
+const Dammy = styled(Link)`
+    font-size:50px;
+`
 
 const Header = () => {
     return (
@@ -14,6 +18,7 @@ const Header = () => {
             <HeaderContainer>
                 <HeaderInner />
             </HeaderContainer>
+
         </>
     )
 }

@@ -18,7 +18,6 @@ const Museum = () => {
             <MuseumSubTitle />
             <MuseumTitle />
             <PageNumber pageNumber="3" />
-            <Arrow  prevLink="/filtro" nextLink="/label" />
         </Container>
         </>
     )

@@ -5,21 +5,19 @@ import PrevArrow from '../../atoms/design/PrevArrow'
 
 const ArrowWrapper = styled.div`
     width: 60vw;
-    height: 15vh;
     display:flex;
     justify-content:space-between;
-    margin:0 auto;
 `
 
-const Arrow = ({prevLink, nextLink}) => {
+const Sample01 = () => {
     return (
         <>
             <ArrowWrapper>
-                <PrevArrow prevLink={prevLink} />
-                <NextArrow nextLink={nextLink}/>
+                <PrevArrow prevLink="" />
+                <NextArrow nextLink="/"/>
             </ArrowWrapper>
         </>
     )
 }
 
-export default Arrow
+export default Sample01

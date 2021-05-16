@@ -6,11 +6,10 @@ const PageWrapper = styled.div`
     display:flex;
     justify-content:space-between;
     transform:rotate(90deg);
-    color:#000;
     width:60px;
     position: absolute;
     bottom:20%;
-    right:30%;
+    right:27%;
     z-index:10;
 
 `
@@ -24,7 +23,7 @@ const PageText = styled(motion.p)`
 const Line = styled.div`
     width:7px;
     height: 0.08em;
-    background-color:#000;
+    background-color:#292929;
     margin-top: 9px;
 `
 const Number = styled.p`

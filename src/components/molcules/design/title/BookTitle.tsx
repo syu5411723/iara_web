@@ -1,4 +1,5 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import TitleText from '../../../atoms/design/TitleText'
 
@@ -8,8 +9,9 @@ const TitleWrapper = styled.div`
     display: block;
     user-select: none;
     position:absolute;
-    bottom:10%;
+    bottom:0%;
     left:20%;
+    display:flex;
 `
 
 

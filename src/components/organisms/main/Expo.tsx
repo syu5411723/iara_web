@@ -18,7 +18,6 @@ const Expo = () => {
             <ExpoSubTitle />
             <ExpoTitle />
             <PageNumber pageNumber="6" />
-            <Arrow  prevLink="/park_it" nextLink="/library" />
         </Container>
         </>
     )

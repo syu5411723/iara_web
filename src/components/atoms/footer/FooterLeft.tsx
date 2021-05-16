@@ -1,13 +1,14 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const FooterLeftText = styled.p`
+const FooterLeftText = styled(Link)`
 `
 
 const FooterLeft = () => {
     return (
         <>
-            <FooterLeftText>about & contact</FooterLeftText>
+            <FooterLeftText to="/" >about & contact</FooterLeftText>
         </>
     )
 }

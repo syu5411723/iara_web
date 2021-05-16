@@ -1,13 +1,15 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const FooterCentertext = styled.p`
+const FooterCentertext = styled(Link)`
+    
 `
 
 const FooterCenterItem = ({text}) => {
     return (
         <>
-            <FooterCentertext>{text}</FooterCentertext>
+            <FooterCentertext to="/" >{text}</FooterCentertext>
         </>
     )
 }

@@ -18,7 +18,6 @@ const Library = () => {
             <LibrarySubTitle />
             <LibraryTitle />
             <PageNumber pageNumber="7" />
-            <Arrow  prevLink="/expo" nextLink="/" />
         </Container>
         </>
     )

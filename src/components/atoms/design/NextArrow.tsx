@@ -5,6 +5,9 @@ import styled from 'styled-components'
 
 const ArrowWrapper = styled(Link)`
     display:flex;
+    width:50px;
+    height: 50px;
+    padding-top:20px;
 `
 const Line = styled(motion.div)`
     width:45px;

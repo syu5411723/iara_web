@@ -17,7 +17,6 @@ const Filtro = () => {
                 <FiltroSubTitle />
                 <FiltroTitle />
                 <PageNumber pageNumber="2" />
-            <Arrow  prevLink="/" nextLink="/museum" />
             </Container>
         </>
     )

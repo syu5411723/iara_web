@@ -5,7 +5,7 @@ import SubTitleText from '../../../atoms/design/SubTitleText'
 
 const Container = styled(motion.div)`
     position:absolute;
-    top:5%;
+    top:10%;
     display:flex;
     margin-left: 20vw;
 `

@@ -1,4 +1,5 @@
 ﻿import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import FooterLeft from '../atoms/footer/FooterLeft'
 import FooterRight from '../atoms/footer/FooterRight'
@@ -16,7 +17,9 @@ const FooterInner = styled.div`
     font-size: 14px;
     font-weight:800;
     letter-spacing:0.1em;
-
+`
+const Dammy = styled(Link)`
+    font-size: 50px;
 `
 
 const Footer = () => {
