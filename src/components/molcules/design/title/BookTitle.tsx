@@ -12,6 +12,7 @@ const TitleWrapper = styled.div`
     bottom:0%;
     left:20%;
     display:flex;
+    z-index:10;
 `
 
 
@@ -19,7 +20,7 @@ const BookTitle = () => {
     return (
         <>
 
-        <TitleWrapper>
+        <TitleWrapper >
             <TitleText text="B" delay={0.08} />
             <TitleText text="O" delay={0.06} />
             <TitleText text="O" delay={0.04} />

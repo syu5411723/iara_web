@@ -11,6 +11,7 @@ const TitleWrapper = styled.div`
     bottom:0%;
     left:20%;
     display:flex;
+    z-index:10;
 `
 
 

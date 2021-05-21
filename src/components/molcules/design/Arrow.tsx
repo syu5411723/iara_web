@@ -1,5 +1,6 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
+import AnimateBg from '../../atoms/design/AnimateBg'
 import NextArrow from '../../atoms/design/NextArrow'
 import PrevArrow from '../../atoms/design/PrevArrow'
 

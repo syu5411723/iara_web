@@ -2,8 +2,8 @@
 
 export default createGlobalStyle`
     .cursor {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         border: 2px solid #fff;
         background-color:#fff;
         border-radius: 100%;
