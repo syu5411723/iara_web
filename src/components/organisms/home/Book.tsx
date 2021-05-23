@@ -1,9 +1,6 @@
 ﻿import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import AnimateBg from '../../atoms/design/AnimateBg'
 
-import Arrow from '../../molcules/design/Arrow'
 import PageNumber from '../../molcules/design/PageNumber'
 import BookSubTitle from "../../molcules/design/subtitle/BookSubTitle"
 import BookTitle from '../../molcules/design/title/BookTitle'
@@ -16,14 +13,12 @@ position:absolute;
 top:30%;
 `
 
-const Book = () => {
+const Book = ({colorBool}) => {
     return (
         <>
         <Container>
-            {/* <Links to="/book/detail" >tetetet</Links> */}
-            {/* <AnimateBg /> */}
             <BookSubTitle />
-            <BookTitle />
+            <BookTitle colorBool={colorBool} />
             <PageNumber pageNumber="1" />
         </Container>
         </>

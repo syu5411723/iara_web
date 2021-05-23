@@ -1,9 +1,6 @@
 ﻿import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Router from '../../router/Router'
-import AnimateBg from '../atoms/design/AnimateBg'
-import Arrow from '../molcules/design/Arrow'
 
 const MainContainer = styled.main`
     width: 100%;
@@ -11,13 +8,12 @@ const MainContainer = styled.main`
     position:relative;
 `
 
-const Main = () => {
+const Main = ({ colorBool }) => {
     return (
         <>
-
             <MainContainer>
-                {/* <AnimateBg /> */}
-                <Router />
+
+                <Router colorBool={colorBool} />
             </MainContainer>
         </>
     )

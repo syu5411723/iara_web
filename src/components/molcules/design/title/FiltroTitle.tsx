@@ -1,8 +1,9 @@
-﻿import React from 'react'
+﻿import { motion } from 'framer-motion'
+import React from 'react'
 import styled from 'styled-components'
 import TitleText from '../../../atoms/design/TitleText'
 
-const TitleWrapper = styled.div`
+const TitleWrapper = styled(motion.div)`
     font-family: lustprodidone-no1uploadedfile,serif;
     color: #000;
     display: block;
@@ -13,20 +14,26 @@ const TitleWrapper = styled.div`
     display:flex;
     z-index:10;
 `
+const titleV = {
+    unHover: {color: "#292929"},
+    hovered:{color:"#fff",transition:{duration:0.1}},
+}
 
-
-const FiltroTitle = () => {
+const FiltroTitle = ({colorBool}) => {
     return (
         <>
 
-        <TitleWrapper>
-            <TitleText text="F" delay={0.12} />
-            <TitleText text="I" delay={0.1} />
-            <TitleText text="L" delay={0.08} />
-            <TitleText text="T" delay={0.06} />
-            <TitleText text="R" delay={0.04} />
-            <TitleText text="O" delay={0.02} />
-        </TitleWrapper>
+            <TitleWrapper
+                variants={titleV}
+                animate={colorBool ? "hovered" : "unHover"}
+            >
+                <TitleText text="F" delay={0.12} />
+                <TitleText text="I" delay={0.1} />
+                <TitleText text="L" delay={0.08} />
+                <TitleText text="T" delay={0.06} />
+                <TitleText text="R" delay={0.04} />
+                <TitleText text="O" delay={0.02} />
+            </TitleWrapper>
         </>
     )
 }

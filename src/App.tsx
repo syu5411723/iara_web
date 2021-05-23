@@ -11,7 +11,8 @@ import Cursor from './components/atoms/design/Cursor';
 import Arrow from './components/molcules/design/Arrow';
 import ArrowRouter from './router/RouterArrow';
 import { AnimatePresence } from 'framer-motion';
-import { LinkRouter } from './router/Router';
+import { AnimateRouter, LinkRouter } from './router/Router';
+import AnimateBg from './components/atoms/design/AnimateBg';
 // import Arrow from "./components/molcules/design/Arrow"
 
 
@@ -23,14 +24,16 @@ const Conrtainer = styled.div`
 `
 
 function App() {
+  const [color, setColor] = React.useState(false)
+  const colorChange = () => setColor(!color);
   return (
     <>
       <GlobalStyles />
       <BrowserRouter>
         <Conrtainer>
           <Header />
-          <Main />
-          <LinkRouter />
+          <Main  colorBool={color} />
+          <AnimateRouter changeColor={colorChange} />
           <ArrowRouter />
           <Footer />
           <Cursor />

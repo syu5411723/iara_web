@@ -8,6 +8,7 @@ const Container = styled(motion.div)`
     top:10%;
     display:flex;
     margin-left: 20vw;
+    z-index:10;
 `
 const Line = styled(motion.div)`
     height: 1px;

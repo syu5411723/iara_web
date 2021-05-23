@@ -12,12 +12,12 @@ const Container = styled.div`
 
 `
 
-const Park = () => {
+const Park = ({colorBool}) => {
     return (
         <>
         <Container>
             <ParkSubTitle />
-            <ParkTitle />
+            <ParkTitle colorBool={colorBool} />
             <PageNumber pageNumber="5" />
         </Container>
         </>

@@ -7,6 +7,7 @@ import FooterCenter from '../molcules/Footer/FooterCenter'
 
 
 const FooterContainer = styled.footer`
+    width:100%;
 `
 const FooterInner = styled.div`
     width:90%;
@@ -28,7 +29,7 @@ const Footer = () => {
             <FooterContainer>
                 <FooterInner>
                     <FooterLeft />
-                    <FooterCenter />
+                    {/* <FooterCenter /> */}
                     <FooterRight />
                 </FooterInner>
             </FooterContainer>

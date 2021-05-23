@@ -5,13 +5,14 @@ import HeaderInner from '../molcules/header/HeaderInner'
 
 const HeaderContainer = styled.header`
     height:70px;
+    width:100%;
     display:flex;
+    justify-content:space-between;
     align-items:flex-end;
-` 
-const Dammy = styled(Link)`
-    font-size:50px;
-`
+    position:fixed;
+    z-index:100;
 
+` 
 const Header = () => {
     return (
         <>

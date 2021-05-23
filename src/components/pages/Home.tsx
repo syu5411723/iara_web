@@ -17,7 +17,7 @@ const Home = () => {
         <>
             <Container>
                 
-                <Main />
+                {/* <Main /> */}
             </Container>
         </>
     )

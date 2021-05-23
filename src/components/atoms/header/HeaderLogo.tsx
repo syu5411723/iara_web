@@ -6,7 +6,6 @@ const Logo = styled(Link)`
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     letter-spacing:1px;
-    
 `
 
 

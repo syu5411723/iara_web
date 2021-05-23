@@ -6,14 +6,12 @@ import styled from 'styled-components'
 const Items = styled(motion.span)`
     font-size: 15vw;
     font-weight:lighter;
-    color:#292929;
 `
 
 const TitleText = ({text, delay}) => {
     const itemV = {
         hidden:{opacity:0, x:"-60px"},
         visible:{opacity:1, x: "0px", transition:{duration:0.7, delay: `${delay}`}},
-        exit:{opacity:0, x: "100px", transition:{duration:0.4, delay: `${delay}`}}
     } 
     
     return (

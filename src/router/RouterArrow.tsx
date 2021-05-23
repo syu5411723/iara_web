@@ -1,5 +1,5 @@
 ﻿import React from 'react'
-import {  Route, Switch } from 'react-router-dom'
+import {  Route, Switch, useLocation } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"
 import Arrow from '../components/molcules/design/Arrow'
 import AnimateBg from '../components/atoms/design/AnimateBg'
@@ -7,9 +7,11 @@ import AnimateBg from '../components/atoms/design/AnimateBg'
 
 
 const ArrowRouter = () => {
+    const location = useLocation();
+    const [_, rootPath] = location.pathname.split("/");
     return (
         <>
-            <AnimatePresence exitBeforeEnter initial={false}>
+            <AnimatePresence exitBeforeEnter initial={false} >
                 <Switch>
                     <Route exact path="/">
                         <Arrow prevLink="library" nextLink="filtro" />
