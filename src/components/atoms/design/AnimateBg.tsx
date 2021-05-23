@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { LinkRouter } from '../../../router/Router'
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     position:absolute;
     top:10%;
     left:50%;
@@ -15,25 +15,20 @@ const Container = styled.div`
 const BgSvg = styled(motion.svg)``
 const Links = styled(Link)``
 
-const svgV = {
+const linkV = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.7, delay: 3 } },
-    exit: { opacity: 0, transiton: { duration: 0.5 } }
+    visible: { opacity: 1, transition:{duration:1, delay:1} },
+    exit: { opacity: 0, transition: { duration: 1 } }
 }
-
 
 const AnimateBg = ({ changeColor }) => {
     return (
         <>
             <Container>
                 <BgSvg
-                                viewBox="20 45 460 435"
-                                width="600"
-                                height="100%"
-                                variants={svgV}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
+                    viewBox="20 45 460 435"
+                    width="60vw"
+                    height="70vh"
                 >
                     <Links to="/">
                         <LinkRouter changeColor={changeColor} />

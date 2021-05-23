@@ -17,17 +17,15 @@ import ParkDetail from '../components/organisms/mainDetail/ParkDetail'
 import ExpoDetail from '../components/organisms/mainDetail/ExpoDetail'
 import LibraryDetail from '../components/organisms/mainDetail/LibraryDetail'
 import AnimateBg from '../components/atoms/design/AnimateBg'
-import Header from '../components/templates/Header'
 import BgPath from '../components/atoms/design/BgPath'
-import BookAnimate from '../components/atoms/main/design/BookAnimate'
-import FiltroAnimate from '../components/atoms/main/design/FiltroAnimate'
+import { animate01, animate02 } from "../components/atoms/design/AnimateData"
 
 const Router = ({ colorBool }) => {
     const location = useLocation();
     const [_, rootPath] = location.pathname.split("/");
     return (
         <>
-            <AnimatePresence exitBeforeEnter initial={false} >
+            <AnimatePresence exitBeforeEnter>
                 <Switch location={location} key={rootPath} >
                     <Route exact path="/">
                         <Book colorBool={colorBool} />
@@ -49,7 +47,7 @@ const Router = ({ colorBool }) => {
                     </Route>
                     <Route exact path="/library">
                         <Library colorBool={colorBool} />
-                    </Route> 
+                    </Route>
                     <Route exact path="/book/detail" component={BookDetail} />
                     <Route exact path="/filtro/detail" component={FiltroDetail} />
                     <Route exact path="/museum/detail" component={MuseumDetail} />
@@ -82,31 +80,33 @@ export const LinkRouter = ({ changeColor, }) => {
                     <stop offset="100%" stop-color="rgba(253,168,29,1)" />
                 </linearGradient>
             </svg>
-            <AnimatePresence>
-                <Switch>
-                    <Route exact path="/">
-                    <BgPath changeColor={changeColor} gradient="url(#gradient01)" />
+            <AnimatePresence exitBeforeEnter >
+            <Switch location={location} key={rootPath} >   
+
+                                
+                <Route exact path="/">
+                    <BgPath changeColor={changeColor} gradient="url(#gradient01)" variants={animate01}/>
                     </Route>
                     <Route exact path="/filtro">
-                    <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
+                    <BgPath changeColor={changeColor} gradient="url(#gradient02)" variants={animate02} />
                     </Route>
                     <Route exact path="/museum">
-                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" />
+                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" variants={animate01} />
                     </Route>
                     <Route exact path="/label">
-                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
+                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" variants={animate01} />
                     </Route>
                     <Route exact path="/park_it">
-                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" />
+                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" variants={animate01} />
                     </Route>
                     <Route exact path="/expo">
-                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
+                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" variants={animate01} />
                     </Route>
                     <Route exact path="/library">
-                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" />
+                        <BgPath changeColor={changeColor} gradient="url(#gradient01)" variants={animate01} />
                     </Route>
                 </Switch>
-            </AnimatePresence>
+        </AnimatePresence>
         </>
     )
 }
@@ -115,8 +115,8 @@ export const AnimateRouter = ({ changeColor }) => {
     const location = useLocation();
     const [_, rootPath] = location.pathname.split("/");
     return (
-        <AnimatePresence exitBeforeEnter initial={false} >
-        <Switch location={location} key={rootPath} >
+        <AnimatePresence>
+            <Switch>
                 <Route path="/">
                     <AnimateBg changeColor={changeColor} />
                 </Route>

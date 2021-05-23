@@ -34,6 +34,7 @@ function App() {
           <Header />
           <Main  colorBool={color} />
           <AnimateRouter changeColor={colorChange} />
+          {/* <AnimateBg changeColor={colorChange} /> */}
           <ArrowRouter />
           <Footer />
           <Cursor />
