@@ -8,7 +8,7 @@ const Items = styled(motion.span)`
     font-weight:lighter;
 `
 
-const TitleText = ({text, delay}) => {
+const TitleText = ({text, exitdelay, delay}) => {
     const itemV = {
         hidden:{opacity:0, x:"-60px"},
         visible:{opacity:1, x: "0px", transition:{duration:0.7, delay: `${delay}`}},
@@ -20,7 +20,7 @@ const TitleText = ({text, delay}) => {
                 variants={itemV}
                 initial="hidden"
                 animate="visible"
-                exit={{opacity:0, x: "60px", transition:{duratoin:0.7, delay:`${delay}` }}}
+                exit={{opacity:0, x: "60px", transition:{duratoin:0.7, delay:`${exitdelay}` }}}
             >{text}</Items>
         </>
     )

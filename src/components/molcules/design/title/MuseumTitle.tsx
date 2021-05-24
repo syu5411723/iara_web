@@ -27,12 +27,13 @@ const MuseumTitle = ({colorBool}) => {
             variants={titleV}
             animate={colorBool ? "hovered" : "unHover"}
         >
-            <TitleText text="M" delay={0.12} />
-            <TitleText text="U" delay={0.1} />
-            <TitleText text="S" delay={0.08} />
-            <TitleText text="E" delay={0.06} />
-            <TitleText text="U" delay={0.04} />
-            <TitleText text="M" delay={0.02} />
+
+            <TitleText text="M" exitdelay={0.12} delay={1.22} />
+            <TitleText text="U" exitdelay={0.1}  delay={1.2}/>
+            <TitleText text="S" exitdelay={0.08} delay={1.18} />
+            <TitleText text="e" exitdelay={0.06} delay={1.16} />
+            <TitleText text="a" exitdelay={0.04} delay={1.14} />
+            <TitleText text="M" exitdelay={0.02} delay={1.12} />
         </TitleWrapper>
         </>
     )

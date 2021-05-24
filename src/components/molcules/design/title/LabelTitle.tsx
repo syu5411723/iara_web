@@ -26,12 +26,12 @@ const LabelTitle = ({colorBool}) => {
             variants={titleV}
             animate={colorBool ? "hovered" : "unHover"}
         >
-            <TitleText text="L" delay={0.12} />
-            <TitleText text="A" delay={0.1} />
-            <TitleText text="B" delay={0.08} />
-            <TitleText text="E" delay={0.06} />
-            <TitleText text="-" delay={0.04} />
-            <TitleText text="L" delay={0.02} />
+            <TitleText text="L" exitdelay={0.12} delay={1.22} />
+            <TitleText text="A" exitdelay={0.1}  delay={1.2}/>
+            <TitleText text="B" exitdelay={0.08} delay={1.18} />
+            <TitleText text="E" exitdelay={0.06} delay={1.16} />
+            <TitleText text="-" exitdelay={0.04} delay={1.14} />
+            <TitleText text="L" exitdelay={0.02} delay={1.12} />
         </TitleWrapper>
         </>
     )

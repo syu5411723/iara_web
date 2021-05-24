@@ -27,13 +27,13 @@ const LibraryTitle = ({colorBool}) => {
             variants={titleV}
             animate={colorBool ? "hovered" : "unHover"}
         >
-            <TitleText text="R" delay={0.14} />
-            <TitleText text="I" delay={0.12} />
-            <TitleText text="B" delay={0.1} />
-            <TitleText text="R" delay={0.08} />
-            <TitleText text="A" delay={0.06} />
-            <TitleText text="R" delay={0.04} />
-            <TitleText text="Y" delay={0.02} />
+            <TitleText text="R" exitdelay={0.14} delay={1.24} />
+            <TitleText text="I" exitdelay={0.12} delay={1.22} />
+            <TitleText text="B" exitdelay={0.1}  delay={1.2}/>
+            <TitleText text="R" exitdelay={0.08} delay={1.18} />
+            <TitleText text="A" exitdelay={0.06} delay={1.16} />
+            <TitleText text="R" exitdelay={0.04} delay={1.14} />
+            <TitleText text="Y" exitdelay={0.02} delay={1.12} />
         </TitleWrapper>
         </>
     )

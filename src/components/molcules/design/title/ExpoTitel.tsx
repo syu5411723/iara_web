@@ -27,10 +27,10 @@ const ExpoTitle = ({colorBool}) => {
                 variants={titleV}
                 animate={colorBool ? "hovered" : "unHover"}
             >
-                <TitleText text="E" delay={0.08} />
-                <TitleText text="X" delay={0.06} />
-                <TitleText text="P" delay={0.04} />
-                <TitleText text="O" delay={0.02} />
+                <TitleText text="E" exitdelay={0.08} delay={1.08} />
+                <TitleText text="X" exitdelay={0.06} delay={1.06} />
+                <TitleText text="P" exitdelay={0.04} delay={1.04} />
+                <TitleText text="O" exitdelay={0.02} delay={1.02} />
             </TitleWrapper>
         </>
     )

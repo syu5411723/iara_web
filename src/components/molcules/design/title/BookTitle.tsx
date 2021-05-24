@@ -31,10 +31,10 @@ const BookTitle = ({colorBool}) => {
             variants={titleV}
             animate={colorBool  ? "hovered" : "unHover" }
         >
-            <TitleText text="B" delay={0.08} />
-            <TitleText text="O" delay={0.06} />
-            <TitleText text="O" delay={0.04} />
-            <TitleText text="K" delay={0.02} />
+            <TitleText text="B" exitdelay={0.08} delay={1.08}  />
+            <TitleText text="O" exitdelay={0.06} delay={1.06}  />
+            <TitleText text="O" exitdelay={0.04} delay={1.04}  />
+            <TitleText text="K" exitdelay={0.02} delay={1.02}  />
         </TitleWrapper>
         </>
     )
