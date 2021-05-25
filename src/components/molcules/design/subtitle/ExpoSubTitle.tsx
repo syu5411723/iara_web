@@ -18,7 +18,7 @@ const Line = styled(motion.div)`
 `
 const lineV = {
     hidden:{width:"0%"},
-    visible: {width:"100px",transition:{duration:0.4}},
+    visible: {width:"100px",transition:{duration:0.4, delay:1}},
 }
 
 const ExpoSubTitle = () => {
@@ -30,14 +30,14 @@ const ExpoSubTitle = () => {
                     animate="visible"
                     initial="hidden"
                 />
-                <SubTitleText subTitle="b" delay={0.34}/>
-                <SubTitleText subTitle="r" delay={0.38} />
-                <SubTitleText subTitle="a" delay={0.42} />
-                <SubTitleText subTitle="n" delay={0.46} />
-                <SubTitleText subTitle="d" delay={0.50} />
-                <SubTitleText subTitle="i" delay={0.54} />
-                <SubTitleText subTitle="n" delay={0.58} />
-                <SubTitleText subTitle="g" delay={0.62} />
+                <SubTitleText subTitle="b" delay={1.34}/>
+                <SubTitleText subTitle="r" delay={1.38} />
+                <SubTitleText subTitle="a" delay={1.42} />
+                <SubTitleText subTitle="n" delay={1.46} />
+                <SubTitleText subTitle="d" delay={1.50} />
+                <SubTitleText subTitle="i" delay={1.54} />
+                <SubTitleText subTitle="n" delay={1.58} />
+                <SubTitleText subTitle="g" delay={1.62} />
             </Container>
         </>
     )

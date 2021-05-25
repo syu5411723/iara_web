@@ -1,59 +1,74 @@
-﻿export const RouterData = [
+﻿import Filtro from '../components/organisms/home/Filtro'
+import Book from '../components/organisms/home/Book'
+import Museum from '../components/organisms/home/Museum'
+import Label from '../components/organisms/home/Label'
+import Park from '../components/organisms/home/Park'
+import Expo from '../components/organisms/home/Expo'
+import Library from '../components/organisms/home/Library'
+import BookDetail from '../components/organisms/mainDetail/BookDetail'
+import FiltroDetail from '../components/organisms/mainDetail/FiltroDetail'
+import LabelDetail from '../components/organisms/mainDetail/LabelDetail'
+import MuseumDetail from '../components/organisms/mainDetail/MuseumDetail'
+import ParkDetail from '../components/organisms/mainDetail/ParkDetail'
+import ExpoDetail from '../components/organisms/mainDetail/ExpoDetail'
+import LibraryDetail from '../components/organisms/mainDetail/LibraryDetail'
+
+export const RouterData = [
     {
         link: "/",
-        component: "Book",
+        component: {Book},
     },
     {
         link: "/filtro",
-        component: "Filtro",
+        component: {Book},
     },
     {
         link: "/museum",
-        component: "Museum",
+        component: {Book},
     },
     {
         link: "/label",
-        component: "Label",
+        component: {Book},
     },
     {
         link: "/park_it",
-        component: "Park",
+        component: {Book},
     },
     {
         link: "/expo",
-        component: "Expo",
+        component: {Book},
     },
     {
         link: "/library",
-        component: "Library",
+        component: {Book},
     },
     {
         link: "/book/detail",
-        component: "BookDetail",
+        component: {Book},
     },
     {
         link: "/filtro/detail",
-        component: "FiltroDetail",
+        component: {Book},
     },
     {
         link: "/museum/detail",
-        component: "MuseumDetail",
+        component: {Book},
     },
     {
         link: "/label/detail",
-        component: "LableDetail",
+        component: {Book},
     },
     {
         link: "/park_it/detail",
-        component: "ParkDetail",
+        component: {Book},
     },
     {
         link: "/expo/detail",
-        component: "ExpoDetail",
+        component: {Book},
     },
     {
         link: "/library/detail",
-        component: "LibraryDetail",
+        component: {Book},
     },
 
 ]

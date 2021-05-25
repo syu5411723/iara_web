@@ -39,7 +39,7 @@ const FiltroDetail = () => {
                     <DetailImgWrapper img={Img07} height="125vw" maxHeight="1600px" />
                     <DetailImgWrapper img={Img08} height="56vw" maxHeight="700px" />
                     <DetailImgWrapper img={Img09} height="75vw" maxHeight="970px" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/museum/deital" />
                 </Inner>
             </Container>
         </>

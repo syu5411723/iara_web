@@ -32,7 +32,7 @@ const ExpoDetail = () => {
             <Container>
                 <Inner>
                     <DammyWrapper bgc="#DFEDF1" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/library/deital" />
                 </Inner>
             </Container>
         </>

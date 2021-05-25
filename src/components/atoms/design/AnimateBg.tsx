@@ -15,7 +15,7 @@ const Container = styled(motion.div)`
 const BgSvg = styled(motion.svg)``
 const Links = styled(Link)``
 
-const AnimateBg = ({ changeColor }) => {
+const AnimateBg = ({ changeColor , detailLink }) => {
     return (
         <>
             <Container>
@@ -24,7 +24,7 @@ const AnimateBg = ({ changeColor }) => {
                     width="60vw"
                     height="70vh"
                 >
-                    <Links to="/">
+                    <Links to={detailLink}>
                         <LinkRouter changeColor={changeColor} />
                     </Links>
                 </BgSvg>

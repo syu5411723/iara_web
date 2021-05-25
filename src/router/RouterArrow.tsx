@@ -2,6 +2,7 @@
 import {  Route, Switch, useLocation } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"
 import Arrow from '../components/molcules/design/Arrow'
+import NextArrow from '../components/atoms/design/NextArrow'
 
 
 
@@ -10,28 +11,27 @@ const ArrowRouter = () => {
     const [_, rootPath] = location.pathname.split("/");
     return (
         <>
-            <AnimatePresence exitBeforeEnter initial={false} >
-                <Switch>
+            <AnimatePresence exitBeforeEnter initial={false}>
+                <Switch location={location} key={rootPath} >
                     <Route exact path="/">
-                        {/* <Arrow prevLink="library" nextLink="filtro" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/filtro">
-                        {/* <Arrow prevLink="/" nextLink="museum" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/museum">
-                        {/* <Arrow prevLink="filtro" nextLink="label" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/label">
-                        {/* <Arrow prevLink="filtro" nextLink="label" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/park_it">
-                        {/* <Arrow prevLink="label" nextLink="expo" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/expo">
-                        {/* <Arrow prevLink="park_it" nextLink="library" /> */}
+                        <NextArrow/>
                     </Route>
                     <Route exact path="/library">
-                        {/* <Arrow prevLink="expo" nextLink="/" /> */}
                     </Route>
                 </Switch>
             </AnimatePresence>

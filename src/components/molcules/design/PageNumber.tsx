@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const PageWrapper = styled.div`
+const PageWrapper = styled(motion.div)`
     display:flex;
     justify-content:space-between;
     transform:rotate(90deg);
@@ -30,6 +30,12 @@ const Number = styled.p`
     font-size: 18x;
     font-weight: bold;
 `
+const wrapperV = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 1.5 } },
+    exit: { oapcity: 0, transition: { duraion: 1, delay: 1.5 } },
+
+}
 
 const pageTextV = {
     hidden: { opacity: 0, },
@@ -39,13 +45,15 @@ const pageTextV = {
 const PageNumber = ({ pageNumber }) => {
     return (
         <>
-            <PageWrapper>
+            <PageWrapper
+                variants={wrapperV}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+            >
                 <TextWrapper>
                     <PageText
-                        variants={pageTextV}
-                        initial="hidden"
-                        animate="visible"
-                        exit={{ opacity: 0, transition: { duration: 0.4 } }}
+
                     >{pageNumber}</PageText>
                 </TextWrapper>
                 <Line />

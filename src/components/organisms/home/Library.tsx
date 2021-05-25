@@ -1,5 +1,6 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
+import ChangeLink from '../../atoms/design/ChangeLink'
 
 import PageNumber from '../../molcules/design/PageNumber'
 import LibrarySubTitle from '../../molcules/design/subtitle/LibrarySubTitle'
@@ -14,6 +15,7 @@ const Library = ({colorBool}) => {
     return (
         <>
         <Container>
+            <ChangeLink />
             <LibrarySubTitle />
             <LibraryTitle colorBool={colorBool} />
             <PageNumber pageNumber="7" />

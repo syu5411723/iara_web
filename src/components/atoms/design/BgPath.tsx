@@ -31,7 +31,7 @@ const animateV = {
 
 const svgV = {
     hidden: { opacity: 0 , scale:0.2},
-    visible: { opacity: 1,scale:1, transition: { type: "spring",stiffness: 100, delay: 2 } },
+    visible: { opacity: 1,scale:1, transition: { type: "spring",stiffness: 80, delay: 2.3 } },
     exit: { opacity: 0, transition: {duration:0, delay:1.7 } }
 }
 

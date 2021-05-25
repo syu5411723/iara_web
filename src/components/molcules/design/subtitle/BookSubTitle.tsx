@@ -18,7 +18,7 @@ const Line = styled(motion.div)`
 `
 const lineV = {
     hidden:{width:"0%"},
-    visible: {width:"100px",transition:{duration:0.4}},
+    visible: {width:"100px",transition:{duration:0.4, delay: 1}},
 }
 
 const BookSubTitle = () => {
@@ -30,15 +30,15 @@ const BookSubTitle = () => {
                     animate="visible"
                     initial="hidden"
                 />
-                <SubTitleText subTitle="e" delay={0.34}/>
-                <SubTitleText subTitle="d" delay={0.38} />
-                <SubTitleText subTitle="i" delay={0.42} />
-                <SubTitleText subTitle="t" delay={0.46} />
-                <SubTitleText subTitle="o" delay={0.50} />
-                <SubTitleText subTitle="r" delay={0.54} />
-                <SubTitleText subTitle="i" delay={0.58} />
-                <SubTitleText subTitle="a" delay={0.62} />
-                <SubTitleText subTitle="l" delay={0.66} />
+                <SubTitleText subTitle="e" delay={1.34}/>
+                <SubTitleText subTitle="d" delay={1.38} />
+                <SubTitleText subTitle="i" delay={1.42} />
+                <SubTitleText subTitle="t" delay={1.46} />
+                <SubTitleText subTitle="o" delay={1.51} />
+                <SubTitleText subTitle="r" delay={1.54} />
+                <SubTitleText subTitle="i" delay={1.58} />
+                <SubTitleText subTitle="a" delay={1.62} />
+                <SubTitleText subTitle="l" delay={1.66} />
             </Container>
         </>
     )

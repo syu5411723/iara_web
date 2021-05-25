@@ -1,5 +1,6 @@
 ﻿import { motion } from 'framer-motion'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import DerailFootrLink from '../../atoms/main/design/DerailFootrLink'
 import DetailFooterContent from '../../atoms/main/design/DetailFooterContent'
@@ -24,21 +25,24 @@ const ContentRight = styled.div`
     width:50%;
     height:50%;
 `
+const ContentInner = styled(Link)``
 const ContentLeft = styled.div`
 
 `
 
-const DetailFooter = () => {
+const DetailFooter = ({ nextLink }) => {
     return (
         <>
             <FooterContainer>
                 <FooterInner>
                     <ContentLeft>
                         <DetailFooterTitle />
-                        <DetailFooterContent  text01="Behace" text02="Editorial Showcase" text03="Grid Based Editorial Design" />
+                        <DetailFooterContent text01="Behace" text02="Editorial Showcase" text03="Grid Based Editorial Design" />
                     </ContentLeft>
-                    <ContentRight>
-                        <DerailFootrLink />
+                    <ContentRight >
+                        <ContentInner to={nextLink} >
+                            <DerailFootrLink />
+                        </ContentInner>
                     </ContentRight>
                 </FooterInner>
             </FooterContainer>

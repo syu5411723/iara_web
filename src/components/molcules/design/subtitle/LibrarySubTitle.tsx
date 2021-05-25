@@ -18,7 +18,7 @@ const Line = styled(motion.div)`
 `
 const lineV = {
     hidden:{width:"0%"},
-    visible: {width:"100px",transition:{duration:0.4}},
+    visible: {width:"100px",transition:{duration:0.4, delay:1}},
 }
 
 const LibrarySubTitle = () => {
@@ -30,17 +30,17 @@ const LibrarySubTitle = () => {
                     animate="visible"
                     initial="hidden"
                 />
-                <SubTitleText subTitle="i" delay={0.34}/>
-                <SubTitleText subTitle="l" delay={0.38} />
-                <SubTitleText subTitle="l" delay={0.42} />
-                <SubTitleText subTitle="u" delay={0.46} />
-                <SubTitleText subTitle="s" delay={0.50} />
-                <SubTitleText subTitle="t" delay={0.54} />
-                <SubTitleText subTitle="r" delay={0.58} />
-                <SubTitleText subTitle="a" delay={0.62} />
-                <SubTitleText subTitle="t" delay={0.66} />
-                <SubTitleText subTitle="o" delay={0.70} />
-                <SubTitleText subTitle="n" delay={0.74} />
+                <SubTitleText subTitle="i" delay={1.34}/>
+                <SubTitleText subTitle="l" delay={1.38} />
+                <SubTitleText subTitle="l" delay={1.42} />
+                <SubTitleText subTitle="u" delay={1.46} />
+                <SubTitleText subTitle="s" delay={1.50} />
+                <SubTitleText subTitle="t" delay={1.54} />
+                <SubTitleText subTitle="r" delay={1.58} />
+                <SubTitleText subTitle="a" delay={1.62} />
+                <SubTitleText subTitle="t" delay={1.66} />
+                <SubTitleText subTitle="o" delay={1.70} />
+                <SubTitleText subTitle="n" delay={1.74} />
             </Container>
         </>
     )

@@ -32,7 +32,7 @@ const LabelDetail = () => {
             <Container>
                 <Inner>
                     <DammyWrapper bgc="#FFF4CE" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/park_it/deital" />
                 </Inner>
             </Container>
         </>

@@ -32,7 +32,7 @@ const LibraryDetail = () => {
             <Container>
                 <Inner>
                     <DammyWrapper bgc="#F1E8D5" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/book/deital" />
                 </Inner>
             </Container>
         </>

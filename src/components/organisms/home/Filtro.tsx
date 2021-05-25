@@ -1,5 +1,6 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
+import ChangeLink from '../../atoms/design/ChangeLink'
 
 import PageNumber from '../../molcules/design/PageNumber'
 import FiltroSubTitle from '../../molcules/design/subtitle/FirtroSubTitle'
@@ -13,6 +14,7 @@ const Filtro = ({colorBool}) => {
     return (
         <>
             <Container>
+                <ChangeLink />
                 <FiltroSubTitle />
                 <FiltroTitle colorBool={colorBool} />
                 <PageNumber pageNumber="2" />

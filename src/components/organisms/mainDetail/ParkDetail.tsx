@@ -32,7 +32,7 @@ const ParkDetail = () => {
             <Container>
                 <Inner>
                     <DammyWrapper bgc="#D2C9F4" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/expo/deital" />
                 </Inner>
             </Container>
         </>

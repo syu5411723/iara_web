@@ -32,7 +32,7 @@ const MuseumDetail = () => {
             <Container>
                 <Inner>
                     <DammyWrapper bgc="#F5F5F5" />
-                    <DetailFooter />
+                    <DetailFooter nextLink="/label/deital" />
                 </Inner>
             </Container>
         </>

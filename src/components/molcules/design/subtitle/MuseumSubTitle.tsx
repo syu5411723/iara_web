@@ -18,7 +18,7 @@ const Line = styled(motion.div)`
 `
 const lineV = {
     hidden:{width:"0%"},
-    visible: {width:"100px",transition:{duration:0.4}},
+    visible: {width:"100px",transition:{duration:0.4, delay:1}},
 }
 
 const MuseumSubTitle = () => {
@@ -30,10 +30,10 @@ const MuseumSubTitle = () => {
                     animate="visible"
                     initial="hidden"
                 />
-                <SubTitleText subTitle="u" delay={0.34}/>
-                <SubTitleText subTitle="x" delay={0.38} />
-                <SubTitleText subTitle="u" delay={0.42} />
-                <SubTitleText subTitle="i" delay={0.46} />
+                <SubTitleText subTitle="u" delay={1.34}/>
+                <SubTitleText subTitle="x" delay={1.38} />
+                <SubTitleText subTitle="u" delay={1.42} />
+                <SubTitleText subTitle="i" delay={1.46} />
             </Container>
         </>
     )
