@@ -13,7 +13,6 @@ import AnimateBg from '../components/atoms/design/AnimateBg'
 import BgPath from '../components/atoms/design/BgPath'
 import AnimateData from '../components/atoms/design/AnimateData'
 import Arrow from '../components/molcules/design/Arrow'
-import FiltroDetail from '../components/organisms/mainDetail/FiltroDetail'
 import DetailHead from '../components/molcules/main/DetailHead'
 
 const Router = ({ colorBool }) => {

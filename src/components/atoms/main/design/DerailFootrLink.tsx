@@ -3,9 +3,8 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
-const ContetWrapper = styled(Link)`
-`
+const LinkWrapper = styled(motion.div)``
+const ContetWrapper = LinkWrapper.withComponent(Link);
 const TextWrapper = styled(motion.div)`
     line-height: 80px;
 `
@@ -43,7 +42,15 @@ const arrowV = {
     hidden: { opacity: 0, x: "-50px" },
     visible: { opacity: 1, x: "0px", transition: { duration: 0.7, delay: 1.8 } }
 }
+const delayV = {
+    hidden:{},
+    visible:{},
+    exit:{opacity:0, transition:{delay:2}},
+}
 
+const scrollTop = () => {
+    window.scrollTo({top:0 , behavior: "smooth"});
+}
 
 const DerailFootrLink = ({nextLink}) => {
     const [ref, inView] = useInView({
@@ -52,7 +59,9 @@ const DerailFootrLink = ({nextLink}) => {
     })
     return (
         <>
-            <ContetWrapper to={nextLink} >
+            <ContetWrapper to={nextLink} onClick={scrollTop}
+                variants={delayV}
+            >
                 <TextWrapper
                     ref={ref} inView={inView}
                     variants={textV}

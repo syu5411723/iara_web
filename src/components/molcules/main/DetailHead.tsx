@@ -10,6 +10,7 @@ const Sec01Container = styled.div`
     display:flex;
     justify-content:space-between;
     height:100%;
+    width:100vw;
     position:absolute;
     background-color: #FFF2E0;
     top:0;

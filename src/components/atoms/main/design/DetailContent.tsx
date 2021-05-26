@@ -9,7 +9,7 @@ const ContetText = styled(motion.p)`
 `
 const V = {
     hidden:{opacity:0, x: "100px"},
-    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:0.7}}
+    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:1.7}}
 }
 
 const DetailContent = ({content}) => {

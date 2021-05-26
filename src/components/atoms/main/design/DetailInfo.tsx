@@ -23,7 +23,7 @@ const InfoText = styled(motion.p)`
 
 const V = {
     hidden:{opacity:0, x: "100px"},
-    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:0.8}}
+    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:1.8}}
 }
 
 const DetailInfo = ({leftText01, leftText02, leftText03, rightText}) => {

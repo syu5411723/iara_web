@@ -11,8 +11,6 @@ const FooterContainer = styled.div`
     width:100%;
     margin-top:-100vh;
     height:100%;
-    /* position:absolute;
-    z-index:1; */
 `
 const FooterInner = styled.div`
     width:100%;
@@ -45,14 +43,6 @@ const ContentLeft = styled.div`
 `
 
 const DetailFooter = ({ nextLink,}) => {
-//     const FooterContainer = styled.div<{marginTop: boolean}>`
-//     background-color: #FBE7E7;
-//     width:100%;
-//     margin-top: ;
-//     height:100%;
-//     /* position:absolute;
-//     z-index:1; */
-// `
     return (
         <>
                 <FooterContainer>
