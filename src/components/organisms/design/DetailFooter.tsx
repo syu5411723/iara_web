@@ -9,7 +9,7 @@ import DetailFooterTitle from '../../atoms/main/design/DetailFooterTitle'
 const FooterContainer = styled.div`
     background-color: #FBE7E7;
     width:100%;
-    /* margin-top:-500px; */
+    margin-top:-100vh;
     height:100%;
     /* position:absolute;
     z-index:1; */
@@ -44,10 +44,17 @@ const ContentLeft = styled.div`
     height:50%;
 `
 
-const DetailFooter = ({ nextLink, view }) => {
+const DetailFooter = ({ nextLink,}) => {
+//     const FooterContainer = styled.div<{marginTop: boolean}>`
+//     background-color: #FBE7E7;
+//     width:100%;
+//     margin-top: ;
+//     height:100%;
+//     /* position:absolute;
+//     z-index:1; */
+// `
     return (
         <>
-            {view && (
                 <FooterContainer>
                     <FooterInner>
                         <ContentWrappr>
@@ -61,8 +68,6 @@ const DetailFooter = ({ nextLink, view }) => {
                         </ContentWrappr>
                     </FooterInner>
                 </FooterContainer>
-
-            )}
 
         </>
     )

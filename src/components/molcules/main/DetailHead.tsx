@@ -11,6 +11,7 @@ const Sec01Container = styled.div`
     justify-content:space-between;
     height:100%;
     position:absolute;
+    background-color: #FFF2E0;
     top:0;
     left:0;
     z-index:99;
