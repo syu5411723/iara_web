@@ -10,7 +10,7 @@ const TitleWrapper = styled(motion.div)`
     display: block;
     user-select: none;
     position:absolute;
-    bottom:0%;
+    bottom:20%;
     left:20%;
     display:flex;
     z-index:10;

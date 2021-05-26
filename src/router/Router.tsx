@@ -9,8 +9,7 @@ import Label from '../components/organisms/home/Label'
 import Park from '../components/organisms/home/Park'
 import Expo from '../components/organisms/home/Expo'
 import Library from '../components/organisms/home/Library'
-import BookDetail from '../components/organisms/mainDetail/BookDetail'
-import FiltroDetail from '../components/organisms/mainDetail/FiltroDetail'
+import BookDetail from '../components/organisms/mainDetail/BookDetail' 
 import LabelDetail from '../components/organisms/mainDetail/LabelDetail'
 import MuseumDetail from '../components/organisms/mainDetail/MuseumDetail'
 import ParkDetail from '../components/organisms/mainDetail/ParkDetail'
@@ -20,7 +19,8 @@ import AnimateBg from '../components/atoms/design/AnimateBg'
 import BgPath from '../components/atoms/design/BgPath'
 import AnimateData from '../components/atoms/design/AnimateData'
 import Arrow from '../components/molcules/design/Arrow'
-import { RouterData } from "./RouterData"
+import FiltroDetail from '../components/organisms/mainDetail/FiltroDetail'
+import DetailHead from '../components/molcules/main/DetailHead'
 
 const Router = ({ colorBool }) => {
     const location = useLocation();
@@ -50,8 +50,13 @@ const Router = ({ colorBool }) => {
                     <Route exact path="/library">
                         <Library colorBool={colorBool} />
                     </Route>
-                    <Route exact path="/book/detail" component={BookDetail} />
-                    <Route exact path="/filtro/detail" component={FiltroDetail} />
+                    <Route exact path="/book/detail">
+                        <DetailHead number="01" title="Book" content="Fashion Portfolio for Melanie Tarica" leftText01="Branding" leftText02="Art Direction" leftText03="Editiorial Design" rightText="2021" />
+                    </Route>
+                    <Route exact path="/filtro/detail">
+                        <DetailHead number="01" title="Book" content="Fashion Portfolio for Melanie Tarica" leftText01="Branding" leftText02="Art Direction" leftText03="Editiorial Design" rightText="2021" />
+
+                    </Route>
                     <Route exact path="/museum/detail" component={MuseumDetail} />
                     <Route exact path="/label/detail" component={LabelDetail} />
                     <Route exact path="/park_it/detail" component={ParkDetail} />
@@ -79,6 +84,12 @@ export const LinkRouter = ({ changeColor, }) => {
                         <BgPath changeColor={changeColor} gradient="url(#gradient01)" />
                     </Route>
                     <Route exact path="/filtro">
+                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
+                    </Route>
+                    <Route exact path="/book/detail">
+                        <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
+                    </Route>
+                    <Route exact path="/filtro/detail">
                         <BgPath changeColor={changeColor} gradient="url(#gradient02)" />
                     </Route>
                     <Route exact path="/museum">
@@ -109,40 +120,57 @@ export const AnimateRouter = ({ changeColor }) => {
         <AnimatePresence>
             <Switch>
                 <Route exact path="/">
-                    <AnimateBg changeColor={changeColor} detailLink="book/detail" />
-                    <Arrow  nextLink="filtro" />
+                    <AnimateBg changeColor={changeColor} detailLink="/book/detail" />
+                    <Arrow nextLink="filtro" />
                 </Route>
                 <Route exact path="/filtro">
-                    <AnimateBg changeColor={changeColor} detailLink="filtro/detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="/filtro/detail" />
                     <Arrow nextLink="/museum" />
                 </Route>
-                <Route exact path="/museum">
-                    <AnimateBg changeColor={changeColor} detailLink="museum/detail" />
-                    <Arrow  nextLink="label" />
+                <Route exact path="/museum/">
+                    <AnimateBg changeColor={changeColor} detailLink="/museum/detail" />
+                    <Arrow nextLink="label" />
                 </Route>
                 <Route exact path="/label">
-                    <AnimateBg changeColor={changeColor} detailLink="label/detail" />
-                    <Arrow  nextLink="park_it" />
+                    <AnimateBg changeColor={changeColor} detailLink="/label/detail" />
+                    <Arrow nextLink="park_it" />
                 </Route>
                 <Route exact path="/park_it">
-                    <AnimateBg changeColor={changeColor} detailLink="park_it/detail"  />
-                    <Arrow  nextLink="expo" />
+                    <AnimateBg changeColor={changeColor} detailLink="/park_it/detail" />
+                    <Arrow nextLink="expo" />
                 </Route>
                 <Route exact path="/expo">
-                    <AnimateBg changeColor={changeColor} detailLink="expo/detail"  />
-                    <Arrow  nextLink="library" />
+                    <AnimateBg changeColor={changeColor} detailLink="/expo/detail" />
+                    <Arrow nextLink="library" />
                 </Route>
                 <Route exact path="/library">
-                    <AnimateBg changeColor={changeColor} detailLink="library/detail" />
-                    <Arrow  nextLink="/" />
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                    <Arrow nextLink="/" />
                 </Route>
                 <Route exact path="/book/detail">
-                    <AnimateBg changeColor={changeColor} detailLink="book/detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                    <Arrow nextLink="/" />
                 </Route>
-
+                <Route exact path="/filtro/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/museum/detail" />
+                </Route>
+                <Route exact path="/museum/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                </Route>
+                <Route exact path="/label/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                </Route>
+                <Route exact path="/park_it/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                </Route>
+                <Route exact path="/expo/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                </Route>
+                <Route exact path="/library/detail">
+                    <AnimateBg changeColor={changeColor} detailLink="/library/detail" />
+                </Route>
             </Switch>
         </AnimatePresence>
     )
 }
-
 

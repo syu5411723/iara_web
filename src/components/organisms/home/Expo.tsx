@@ -6,7 +6,11 @@ import PageNumber from '../../molcules/design/PageNumber'
 import ExpoSubTitle from '../../molcules/design/subtitle/ExpoSubTitle'
 import ExpoTitle from '../../molcules/design/title/ExpoTitel'
 
-const Container = styled.div``
+const Container = styled.div`
+    width:100vw;
+    height:100vh;
+    position: relative;
+`
 
 const Expo = ({colorBool}) => {
     return (

@@ -9,6 +9,11 @@ import DetaiTitle from '../../atoms/main/design/DetaiTitle'
 const Sec01Container = styled.div`
     display:flex;
     justify-content:space-between;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:99;
 `
 const LeftContainer = styled.div`
     width:50%;

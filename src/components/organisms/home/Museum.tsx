@@ -7,7 +7,9 @@ import MuseumSubTitle from '../../molcules/design/subtitle/MuseumSubTitle'
 import MuseumTitle from '../../molcules/design/title/MuseumTitle'
 
 const Container = styled.div`
-
+    width:100vw;
+    height:100vh;
+    position: relative;
 `
 
 

@@ -10,7 +10,9 @@ import ParkSubTitle from '../../molcules/design/subtitle/ParkSubTitle'
 import ParkTitle from '../../molcules/design/title/ParkTitle'
 
 const Container = styled.div`
-
+    width:100vw;
+    height:100vh;
+    position: relative;
 `
 
 const Park = ({colorBool}) => {

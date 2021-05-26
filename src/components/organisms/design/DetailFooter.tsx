@@ -7,45 +7,63 @@ import DetailFooterContent from '../../atoms/main/design/DetailFooterContent'
 import DetailFooterTitle from '../../atoms/main/design/DetailFooterTitle'
 
 const FooterContainer = styled.div`
-    background-color: #FFF2E0;
+    background-color: #FBE7E7;
     width:100%;
-    padding: 200px 0;
-    margin-top:-200px;
-    position:relative;
+    /* margin-top:-500px; */
+    height:100%;
+    /* position:absolute;
+    z-index:1; */
 `
 const FooterInner = styled.div`
-    width:80%;
+    width:100%;
+    height:100%;
     max-width:1250px;
-    display:flex;
-    justify-content:space-between;
+    background-color: #FFF2E0;
+    position:relative;
     margin:0 auto;
+    padding: 200px 0;
+    z-index:0;
 
+`
+const ContentWrappr = styled.div`
+    width:80%;
+    height:100%;
+    display:flex;
+    justify-content:flex-start;
+    margin:0 auto;
 `
 const ContentRight = styled.div`
     width:50%;
     height:50%;
+    display:flex;
+    justify-content:center;
 `
-const ContentInner = styled(Link)``
+
 const ContentLeft = styled.div`
-
+    width:50%;
+    height:50%;
 `
 
-const DetailFooter = ({ nextLink }) => {
+const DetailFooter = ({ nextLink, view }) => {
     return (
         <>
-            <FooterContainer>
-                <FooterInner>
-                    <ContentLeft>
-                        <DetailFooterTitle />
-                        <DetailFooterContent text01="Behace" text02="Editorial Showcase" text03="Grid Based Editorial Design" />
-                    </ContentLeft>
-                    <ContentRight >
-                        <ContentInner to={nextLink} >
-                            <DerailFootrLink />
-                        </ContentInner>
-                    </ContentRight>
-                </FooterInner>
-            </FooterContainer>
+            {view && (
+                <FooterContainer>
+                    <FooterInner>
+                        <ContentWrappr>
+                            <ContentLeft>
+                                <DetailFooterTitle />
+                                <DetailFooterContent text01="Behace" text02="Editorial Showcase" text03="Grid Based Editorial Design" />
+                            </ContentLeft>
+                            <ContentRight>
+                                <DerailFootrLink nextLink={nextLink} />
+                            </ContentRight>
+                        </ContentWrappr>
+                    </FooterInner>
+                </FooterContainer>
+
+            )}
+
         </>
     )
 }

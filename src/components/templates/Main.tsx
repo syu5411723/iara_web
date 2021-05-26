@@ -1,19 +1,21 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
-import Router from '../../router/Router'
+import Router, { AnimateRouter } from '../../router/Router'
 
-const MainContainer = styled.main`
-    width: 100%;
-    height: 100%;
+const MainContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
     position:relative;
+    z-index:2;
+    background-color: #FFF2E0;
 `
 
-const Main = ({ colorBool }) => {
+const Main = ({ colorBool, changeColor }) => {
     return (
         <>
             <MainContainer>
-
                 <Router colorBool={colorBool} />
+                <AnimateRouter changeColor={changeColor} />
             </MainContainer>
         </>
     )

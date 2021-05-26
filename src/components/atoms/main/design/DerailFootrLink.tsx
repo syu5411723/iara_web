@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const ContetWrapper = styled(motion.div)`
+const ContetWrapper = styled(Link)`
 `
 const TextWrapper = styled(motion.div)`
     line-height: 80px;
@@ -17,11 +17,11 @@ const Text = styled(motion.h1)`
 const ArrowWrapper = styled(motion.div)`
     position:absolute;
     top:41%;
-    right:5px;
+    right:7%;
     display:flex;
 `
 const Line = styled.div`
-    width:200px;
+    width:15vw;
     height: 0.15em;
     background-color: #292929;
     margin-right: -21px;
@@ -35,13 +35,6 @@ const Arrow = styled.div`
     margin-top:-8px;
     
 `
-
-const wrapperV = {
-    hidden:{opacity:1},
-    visible:{opcity:1},
-    exit:{opcity:0, transition:{duration:0.5}}
-
-}
 const textV = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 1 } }
@@ -52,16 +45,14 @@ const arrowV = {
 }
 
 
-const DerailFootrLink = () => {
+const DerailFootrLink = ({nextLink}) => {
     const [ref, inView] = useInView({
         rootMargin: "-100px 0px",
         triggerOnce: true,
     })
     return (
         <>
-            <ContetWrapper
-                
-            >
+            <ContetWrapper to={nextLink} >
                 <TextWrapper
                     ref={ref} inView={inView}
                     variants={textV}

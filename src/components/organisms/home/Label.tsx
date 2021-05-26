@@ -7,7 +7,9 @@ import LabelSubTitle from '../../molcules/design/subtitle/LabelSubTitle'
 import LabelTitle from '../../molcules/design/title/LabelTitle'
 
 const Container = styled.div`
-
+    width:100vw;
+    height:100vh;
+    position: relative;
 `
 
 

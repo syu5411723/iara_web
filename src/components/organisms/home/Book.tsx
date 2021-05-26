@@ -7,11 +7,8 @@ import BookSubTitle from "../../molcules/design/subtitle/BookSubTitle"
 import BookTitle from '../../molcules/design/title/BookTitle'
 
 const Container = styled.div`
-
-`
-const Links = styled.div`
-position:absolute;
-top:30%;
+    width:100vw;
+    height:100vh;
 `
 
 const Book = ({colorBool}) => {

@@ -8,7 +8,7 @@ const PageWrapper = styled(motion.div)`
     transform:rotate(90deg);
     width:60px;
     position: absolute;
-    bottom:20%;
+    bottom:34%;
     right:27%;
     z-index:10;
 
@@ -53,7 +53,6 @@ const PageNumber = ({ pageNumber }) => {
             >
                 <TextWrapper>
                     <PageText
-
                     >{pageNumber}</PageText>
                 </TextWrapper>
                 <Line />

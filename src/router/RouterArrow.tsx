@@ -1,8 +1,8 @@
 ﻿import React from 'react'
-import {  Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"
-import Arrow from '../components/molcules/design/Arrow'
 import NextArrow from '../components/atoms/design/NextArrow'
+import DetailFooter from '../components/organisms/design/DetailFooter'
 
 
 
@@ -14,22 +14,25 @@ const ArrowRouter = () => {
             <AnimatePresence exitBeforeEnter initial={false}>
                 <Switch location={location} key={rootPath} >
                     <Route exact path="/">
-                        <NextArrow/>
+                        <NextArrow />
                     </Route>
                     <Route exact path="/filtro">
-                        <NextArrow/>
+                        <NextArrow />
+                    </Route>
+                    <Route exact path="/filtro/detail">
+                        <NextArrow />
                     </Route>
                     <Route exact path="/museum">
-                        <NextArrow/>
+                        <NextArrow />
                     </Route>
                     <Route exact path="/label">
-                        <NextArrow/>
+                        <NextArrow />
                     </Route>
                     <Route exact path="/park_it">
-                        <NextArrow/>
+                        <NextArrow />
                     </Route>
                     <Route exact path="/expo">
-                        <NextArrow/>
+                        <NextArrow />
                     </Route>
                     <Route exact path="/library">
                     </Route>
