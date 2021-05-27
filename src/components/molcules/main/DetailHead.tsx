@@ -19,17 +19,25 @@ const Sec01Container = styled.div`
 `
 const LeftContainer = styled.div`
     width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 `
 const RightContainer = styled(motion.div)`
     width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left: 5vw;
 `
+
 const RightInner = styled.div`
     display:flex;
     justify-content:space-between;
     flex-direction:column;
 `
 
-const DetailHead = ({number, title, content, leftText01, leftText02, leftText03, rightText }) => {
+const DetailHead = ({ number, title, content, leftText01, leftText02, leftText03, rightText }) => {
     return (
         <>
             <Sec01Container>
@@ -37,11 +45,11 @@ const DetailHead = ({number, title, content, leftText01, leftText02, leftText03,
                     <DetailNumber number={number} />
                 </LeftContainer>
                 <RightContainer>
-                    <RightInner>
-                        <DetaiTitle title={title} />
-                        <DetailContent content={content} />
-                        <DetailInfo leftText01={leftText01} leftText02={leftText02} leftText03={leftText03} rightText={rightText} />
-                    </RightInner>
+                        <RightInner>
+                            <DetaiTitle title={title} />
+                            <DetailContent content={content} />
+                            <DetailInfo leftText01={leftText01} leftText02={leftText02} leftText03={leftText03} rightText={rightText} />
+                        </RightInner>
                 </RightContainer>
             </Sec01Container>
         </>

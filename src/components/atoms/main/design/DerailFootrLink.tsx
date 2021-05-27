@@ -3,8 +3,10 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-const LinkWrapper = styled(motion.div)``
-const ContetWrapper = LinkWrapper.withComponent(Link);
+import DelayLink from "react-delay-link"
+
+const LinkWrapper = styled(motion.a)``
+const ContetWrapper = LinkWrapper.withComponent(DelayLink);
 const TextWrapper = styled(motion.div)`
     line-height: 80px;
 `
@@ -13,6 +15,7 @@ const Text = styled(motion.h1)`
     font-weight: bold;
     letter-spacing:2px;
 `
+const DelayWrapper = styled(motion.div)``
 const ArrowWrapper = styled(motion.div)`
     position:absolute;
     top:41%;
@@ -43,41 +46,49 @@ const arrowV = {
     visible: { opacity: 1, x: "0px", transition: { duration: 0.7, delay: 1.8 } }
 }
 const delayV = {
-    hidden:{},
-    visible:{},
-    exit:{opacity:0, transition:{delay:2}},
+    hidden: {opacity:0},
+    visible: {opacity:1},
+    exit: { opacity: 0, transition: { delay: 2 } },
 }
 
 const scrollTop = () => {
-    window.scrollTo({top:0 , behavior: "smooth"});
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-const DerailFootrLink = ({nextLink}) => {
+const DerailFootrLink = ({ nextLink, scrollDelay }) => {
     const [ref, inView] = useInView({
         rootMargin: "-100px 0px",
         triggerOnce: true,
     })
     return (
         <>
-            <ContetWrapper to={nextLink} onClick={scrollTop}
-                variants={delayV}
-            >
-                <TextWrapper
-                    ref={ref} inView={inView}
-                    variants={textV}
-                    animate={inView ? "visible" : "hidden"}
+        <Link to={nextLink} >
+            <ContetWrapper to={nextLink} delay={scrollDelay} >
+                <DelayWrapper
+                    onClick={scrollTop}
+                    variants={delayV}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
                 >
-                    <Text>next</Text>
-                    <Text>project</Text>
-                </TextWrapper>
-                <ArrowWrapper
-                    variants={arrowV}
-                    animate={inView ? "visible" : "hidden"}
-                >
-                    <Line />
-                    <Arrow />
-                </ArrowWrapper>
+                    <TextWrapper
+                        ref={ref} inView={inView}
+                        variants={textV}
+                        animate={inView ? "visible" : "hidden"}
+                    >
+                        <Text>next</Text>
+                        <Text>project</Text>
+                    </TextWrapper>
+                    <ArrowWrapper
+                        variants={arrowV}
+                        animate={inView ? "visible" : "hidden"}
+                    >
+                        <Line />
+                        <Arrow />
+                    </ArrowWrapper>
+                </DelayWrapper>
             </ContetWrapper>
+            </Link>
         </>
     )
 }
