@@ -9,7 +9,6 @@ import FiltroTitle from '../../molcules/design/title/FiltroTitle'
 const Container = styled.div`
     width:100vw;
     height:100vh;
-    position: relative;
 `
 
 const Filtro = ({colorBool}) => {

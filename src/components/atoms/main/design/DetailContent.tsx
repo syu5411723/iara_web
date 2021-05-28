@@ -2,24 +2,31 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ContetText = styled(motion.p)`
-    font-size: 30px;
-    font-weight:800;
+const ContenteWrapper = styled(motion.div)`
     margin-bottom: 40px;
+    line-height:3.3vw;
+`
+
+const ContetText = styled.p`
+    font-size: 3.2vw;
+    font-weight:800;
 `
 const V = {
-    hidden:{opacity:0, x: "100px"},
-    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:1.7}}
+    hidden: { opacity: 0, x: "100px" },
+    visible: { opacity: 1, x: "0px", transition: { duration: 0.7, delay: 1.3 } }
 }
 
-const DetailContent = ({content}) => {
+const DetailContent = ({ content01, content02 }) => {
     return (
         <>
-            <ContetText
+            <ContenteWrapper
                 variants={V}
                 initial="hidden"
                 animate="visible"
-            >{content}</ContetText>
+            >
+                <ContetText>{content01}</ContetText>
+                <ContetText>{content02}</ContetText>
+            </ContenteWrapper>
         </>
     )
 }

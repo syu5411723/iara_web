@@ -5,7 +5,8 @@ import styled from 'styled-components'
 
 const Items = styled(motion.span)`
     font-size: 15vw;
-    font-weight:lighter;
+    font-weight:100;
+    font-family: 'Lora', serif;
 `
 
 const TitleText = ({text, exitdelay, delay}) => {

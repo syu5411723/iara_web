@@ -32,8 +32,9 @@ const MuseumSubTitle = () => {
                 />
                 <SubTitleText subTitle="u" delay={1.34}/>
                 <SubTitleText subTitle="x" delay={1.38} />
-                <SubTitleText subTitle="u" delay={1.42} />
-                <SubTitleText subTitle="i" delay={1.46} />
+                <SubTitleText subTitle="/" delay={1.42} />
+                <SubTitleText subTitle="u" delay={1.46} />
+                <SubTitleText subTitle="i" delay={1.50} />
             </Container>
         </>
     )

@@ -14,7 +14,7 @@ const SwitchWrapper = styled(motion.div)`
 const switchV = {
     hidden:{x:"-100vw"},
     visible:{x:"-100vw"},
-    exit:{x:"0", transition:{duration:1.5, delay:0.7}},
+    exit:{x:"0px", transition:{duration:1, delay:0.7}},
 }
 
 

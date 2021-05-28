@@ -9,7 +9,6 @@ import ExpoTitle from '../../molcules/design/title/ExpoTitel'
 const Container = styled.div`
     width:100vw;
     height:100vh;
-    position: relative;
 `
 
 const Expo = ({colorBool}) => {

@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 const Item = styled(motion.h2)`
     font-size: 32px;
+    font-weight:100;
+    font-family: 'Lora', serif;
 `
 
 const SubTitleText = ({subTitle, delay}) => {

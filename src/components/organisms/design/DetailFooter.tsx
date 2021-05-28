@@ -1,6 +1,4 @@
-﻿import { motion } from 'framer-motion'
-import React from 'react'
-import { Link } from 'react-router-dom'
+﻿import React from 'react'
 import styled from 'styled-components'
 import DerailFootrLink from '../../atoms/main/design/DerailFootrLink'
 import DetailFooterContent from '../../atoms/main/design/DetailFooterContent'

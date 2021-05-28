@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const InfoContaienr = styled(motion.div)`
     display:flex;
     justify-content:space-between;
-    width: 200px;
+    width: 18vw;
 `
 const Infoleft = styled.div`
     display:flex;
@@ -16,14 +16,14 @@ const InfoRight = styled.div`
 
 `
 const InfoText = styled(motion.p)`
-    font-size:13px;
+    font-size:1.2vw;
     font-family: andale_monoregular,sans-serif;
     margin-bottom: 5px;
 `
 
 const V = {
     hidden:{opacity:0, x: "100px"},
-    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:1.8}}
+    visible:{opacity:1, x: "0px", transition:{duration:0.7, delay:1.6}}
 }
 
 const DetailInfo = ({leftText01, leftText02, leftText03, rightText}) => {

@@ -1,13 +1,10 @@
 ﻿import { motion } from 'framer-motion'
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import img from "../../../images/2.jpg"
 
 const BgPaths = styled(motion.path)``
-const LinksStyle = styled(motion.a)``
-const Links = LinksStyle.withComponent(Link);
 const G = styled(motion.g)``
 
 const animateV = {
@@ -31,8 +28,8 @@ const animateV = {
 
 const svgV = {
     hidden: { opacity: 0 , scale:0.2},
-    visible: { opacity: 1,scale:1, transition: { type: "spring",stiffness: 80, delay: 2.3 } },
-    exit: { opacity: 0, transition: {duration:0, delay:1.7 } }
+    visible: { opacity: 1,scale:1, transition: { type: "spring",stiffness: 100, delay: 2.3 } },
+    exit: { opacity: 0, transition: {duration:0, delay:1.4 } }
 }
 
 const BgPath = ({ changeColor, gradient }) => {

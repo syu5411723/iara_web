@@ -35,6 +35,7 @@ const ArrowRouter = () => {
                         <NextArrow />
                     </Route>
                     <Route exact path="/library">
+                        <NextArrow />
                     </Route>
                 </Switch>
             </AnimatePresence>

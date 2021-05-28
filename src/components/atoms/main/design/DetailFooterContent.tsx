@@ -15,11 +15,12 @@ const Content01 = styled.div`
 `
 const Content02 = styled.div`
     border-bottom:1px solid #292929;
-    width: 135px;
+    width: 132px;
     margin-bottom: 15px;
 `
 const Content03 = styled.div`
     border-bottom:1px solid #292929;
+    width:186px;
 
 `
 

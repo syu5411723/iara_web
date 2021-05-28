@@ -10,7 +10,6 @@ const AnimateData = () => {
                 </linearGradient>
                 <linearGradient id="gradient02">
                     <stop offset="0%" stop-color="rgb(255, 95, 109)" />
-                    {/* <stop offset="100%" stop-color="rgb(233, 100, 67)" /> */}
                     <stop offset="100%" stop-color="rgb(255, 195, 113)" />
                 </linearGradient>
                 <linearGradient id="gradient03">
@@ -30,7 +29,7 @@ const AnimateData = () => {
                     <stop offset="100%" stop-color="rgb(120, 60, 190)" />
                 </linearGradient>
                 <linearGradient id="gradient07">
-                <stop offset="0%" stop-color="rgb(110, 100, 190)" />
+                    <stop offset="0%" stop-color="rgb(110, 100, 190)" />
                     <stop offset="100%" stop-color="rgb(170, 50, 90)" />
                 </linearGradient>
             </svg>
