@@ -32,12 +32,12 @@ const svgV = {
     exit: { opacity: 0, transition: {duration:0, delay:1.4 } }
 }
 
-const BgPath = ({ changeColor, gradient }) => {
+const BgPath = ({ hoverBg, changeColor, gradient }) => {
     return (
         <>
             <defs>
                 <pattern id="img1" patternUnits="userSpaceOnUse" width="900" height="600">
-                    <image href={img} x="-150" y="50" width="900" height="600" />
+                    <image href={hoverBg} x="-150" y="50" width="900" height="500" />
                 </pattern>
             </defs>
             <G

@@ -1,6 +1,6 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
-import Hamburger from '../../atoms/header/Hamburger'
+import Hamburger from "./Hamburger"
 import HeaderLogo from '../../atoms/header/HeaderLogo'
 
 const HeaderInnerWrapper = styled.div`

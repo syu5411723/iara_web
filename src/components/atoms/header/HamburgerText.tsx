@@ -3,18 +3,17 @@ import styled from 'styled-components'
 import {Link} from "react-router-dom"
 
 
-const Project = styled.div``
+const Project = styled.div`
+    @media screen and (max-width: 786px) {
+        display:none
+    }
+`
 const FromLink = styled.p`
     color:#000;
     font-weight: bold;
 `
 
-const HamburgerConrainer = styled.div``
-const Line01 = styled.div``
-const Line02 = styled.div``
-const Line03 = styled.div``
-
-const Hamburger = () => {
+const HamburgerText = () => {
     return (
         <>
             <Project>
@@ -24,4 +23,4 @@ const Hamburger = () => {
     )
 }
 
-export default Hamburger
+export default HamburgerText
