@@ -34,7 +34,6 @@ const BookDetail = () => {
                     <DetailImgWrapper img={Img06} height="153vw" maxHeight="1900px" />
                     <DetailImgWrapper img={Img07} height="100vw" maxHeight="1100px" />
                 </Inner>
-
             </Container>
 
         </>

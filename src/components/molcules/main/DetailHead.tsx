@@ -6,7 +6,6 @@ import DetailContent from '../../atoms/main/design/DetailContent'
 import DetailInfo from '../../atoms/main/design/DetailInfo'
 import DetailNumber from '../../atoms/main/design/DetailNumber'
 import DetaiTitle from '../../atoms/main/design/DetaiTitle'
-import HeaderInner from '../header/HeaderInner'
 
 const HeadContainer = styled(motion.div)`
     height: 100vh;

@@ -18,7 +18,7 @@ const ChangeWrapper = styled(motion.div)`
 const WrapperV = {
     hidden:{opacity:1},
     visible: {opacity:1},
-    exit: {opacity:1 , transition:{duration:0, delay:1.4}}
+    exit: {opacity:1 , transition:{duration:0, delay:1.5}}
 }
 const DetailChangeLink = () => {
     return (

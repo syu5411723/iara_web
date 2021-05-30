@@ -26,7 +26,7 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Conrtainer>
-          <Header />
+          <Header  setColor={setColor} />
           <Cursor />
           <Main colorBool={color} changeColor={colorChange} />
           <FooterRouter />

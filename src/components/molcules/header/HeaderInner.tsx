@@ -11,11 +11,11 @@ const HeaderInnerWrapper = styled.div`
     margin:0 auto;
 `
 
-const HeaderInner = () => {
+const HeaderInner = ({setColor}) => {
     return (
         <>
             <HeaderInnerWrapper>
-                <HeaderLogo />
+                <HeaderLogo setColor={setColor} />
                 <Hamburger />
             </HeaderInnerWrapper>
         </>

@@ -97,7 +97,7 @@ export const LinkRouter = ({ changeColor, }) => {
                         <BgPath hoverBg={img02} changeColor={changeColor} gradient="url(#gradient02)" />
                     </Route>
                     <Route exact path="/museum">
-                        <BgPath hoverBg={img05} changeColor={changeColor} gradient="url(#gradient03)" />
+                        <BgPath hoverBg={img03} changeColor={changeColor} gradient="url(#gradient03)" />
                     </Route>
                     <Route exact path="/label">
                         <BgPath hoverBg={img04} changeColor={changeColor} gradient="url(#gradient04)" />
@@ -112,25 +112,25 @@ export const LinkRouter = ({ changeColor, }) => {
                         <BgPath hoverBg={img06} changeColor={changeColor} gradient="url(#gradient07)" />
                     </Route>
                     <Route exact path="/book_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/filtro_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/museum_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/label_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/park_it_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/expo_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                     <Route exact path="/library_detail">
-                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="" />
+                        <BgPath hoverBg={img01} changeColor={changeColor} gradient="#" />
                     </Route>
                 </Switch>
             </AnimatePresence>
@@ -171,31 +171,31 @@ export const AnimateRouter = ({ changeColor }) => {
                     <Arrow nextLink="/" />
                 </Route>
                 <Route exact path="/book_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
                 <Route exact path="/filtro_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/museum_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
                 <Route exact path="/museum_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
                 <Route exact path="/label_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
                 <Route exact path="/park_it_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
                 <Route exact path="/expo_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
-                <Route exact path="/library_detail">
-                    <AnimateBg changeColor={changeColor} detailLink="/library_detail" />
+                <Route exact path="library_detail">
+                    <AnimateBg changeColor={changeColor} detailLink="" />
                     <Arrow nextLink="/filtro" />
                 </Route>
             </Switch>

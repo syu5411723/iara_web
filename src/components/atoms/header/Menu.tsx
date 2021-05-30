@@ -39,10 +39,10 @@ const itemV = {
 
 
 
-const Menu = ({ isOpen , setOpen }) => {
+const Menu = ({ isOpen, setOpen }) => {
     const chngeLink = () => {
         setOpen(!isOpen);
-        window.scrollTo({top: 0 , behavior : "smooth" })
+        window.scrollTo({ top: 0, behavior: "smooth" })
     }
     return (
         <>
@@ -54,15 +54,18 @@ const Menu = ({ isOpen , setOpen }) => {
                         animate={isOpen ? "open" : "closed"}
                     >
                         {data.map((item) => (
-                            <MenuItem
-                                variants={itemV}
-                                whileHover="hover"
-                                onClick={chngeLink}
+                            <motion.div
+                                whileHover={{scale: 1.2, originX: 0}}
                             >
-                                <Links to={item.link}>
-                                    {item.text}
-                                </Links>
-                            </MenuItem>
+                                <MenuItem
+                                    variants={itemV}
+                                    onClick={chngeLink}
+                                >
+                                    <Links to={item.link}>
+                                        {item.text}
+                                    </Links>
+                                </MenuItem>
+                            </motion.div>
                         ))}
                     </MenuList>
                 </MenuInner>

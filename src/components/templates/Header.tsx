@@ -13,11 +13,11 @@ const HeaderContainer = styled.header`
     z-index:100;
 
 ` 
-const Header = () => {
+const Header = ({setColor}) => {
     return (
         <>
             <HeaderContainer>
-                <HeaderInner />
+                <HeaderInner  setColor={setColor} />
             </HeaderContainer>
 
         </>
