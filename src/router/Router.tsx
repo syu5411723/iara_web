@@ -19,7 +19,7 @@ import img01 from "../images/2.jpg"
 import img02 from "../images/filtroCover.jpg"
 import img03 from "../images/museumCover.jpg"
 import img04 from "../images/labelCover.jpg"
-import img05 from "../images/parl_itCover.jpg"
+// import img05 from "../images/parl_itCover.jpg"
 import img06 from "../images/libraryCover.jpg"
 
 

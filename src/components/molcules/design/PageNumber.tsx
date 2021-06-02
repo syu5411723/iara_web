@@ -8,7 +8,7 @@ const PageWrapper = styled(motion.div)`
     transform:rotate(90deg);
     width:60px;
     position: absolute;
-    bottom:34%;
+    bottom:36%;
     right:27%;
     z-index:10;
 

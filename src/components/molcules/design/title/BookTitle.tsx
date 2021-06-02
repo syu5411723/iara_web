@@ -26,7 +26,6 @@ const titleV = {
 const BookTitle = ({colorBool}) => {
     return (
         <>
-        {/* <ChangeLink /> */}
         <TitleWrapper 
             variants={titleV}
             animate={colorBool  ? "hovered" : "unHover" }
