@@ -3,10 +3,9 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import DelayLink from "react-delay-link"
 
 const LinkWrapper = styled(motion.a)``
-const ContetWrapper = LinkWrapper.withComponent(DelayLink);
+const ContetWrapper = LinkWrapper.withComponent(Link);
 const TextWrapper = styled(motion.div)`
     line-height: 80px;
 `
@@ -55,21 +54,19 @@ const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-const DerailFootrLink = ({ nextLink, scrollDelay }) => {
+const DerailFootrLink = ({ nextLink }) => {
     const [ref, inView] = useInView({
         rootMargin: "-100px 0px",
         triggerOnce: true,
     })
     return (
         <>
-        <Link to={nextLink} >
-            <ContetWrapper to={nextLink} delay={scrollDelay} >
+            <ContetWrapper to={nextLink}>
                 <DelayWrapper
                     onClick={scrollTop}
                     variants={delayV}
                     initial="hidden"
                     animate="visible"
-                    exit="exit"
                 >
                     <TextWrapper
                         ref={ref} inView={inView}
@@ -88,7 +85,6 @@ const DerailFootrLink = ({ nextLink, scrollDelay }) => {
                     </ArrowWrapper>
                 </DelayWrapper>
             </ContetWrapper>
-            </Link>
         </>
     )
 }

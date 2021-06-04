@@ -1,4 +1,5 @@
-﻿import React from 'react'
+﻿import { motion } from 'framer-motion'
+import React from 'react'
 import styled from "styled-components"
 
 import Img01 from "../../../images/1.jpg"
@@ -11,7 +12,7 @@ import Img07 from "../../../images/7.jpg"
 import DetailImgWrapper from '../../molcules/main/DetailImgWrapper'
 
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     background-color: #FBE7E7;
     margin-bottom: 100vh;
 `
@@ -20,11 +21,19 @@ const Inner = styled.div`
     max-width:1250px;
     margin:0 auto;
 `
+const containerV ={
+    hidden:{},
+    visible: {},
+    exit: {opacity: 1, transition:{delay:0.6}}
+}
 
 const BookDetail = () => {
     return (
         <>
-            <Container>
+            <Container
+                variants={containerV}
+                exit="exit"
+            >
                 <Inner>
                     <DetailImgWrapper img={Img01} height="40vw" maxHeight="500px" />
                     <DetailImgWrapper img={Img02} height="65vw" maxHeight="860px" />

@@ -1,4 +1,5 @@
-﻿import React from 'react'
+﻿import { motion } from 'framer-motion'
+import React from 'react'
 import styled from "styled-components"
 
 import Img01 from "../../../images/filtro1.jpg"
@@ -13,7 +14,7 @@ import Img09 from "../../../images/filtro9.jpg"
 import DetailImgWrapper from '../../molcules/main/DetailImgWrapper'
 
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     background-color: #FBE7E7;
     margin-bottom: 100vh;
 `
@@ -23,10 +24,20 @@ const Inner = styled.div`
     margin:0 auto;
 `
 
+const containerV ={
+    hidden:{},
+    visible: {},
+    exit: {opacity: 1, transition:{delay:0.6}}
+}
+
+
 const FiltroDetail = () => {
     return (
         <>
-            <Container>
+            <Container
+                variants={containerV}z
+                exit="exit"
+            >
                 <Inner>
                     <DetailImgWrapper img={Img01} height="60vw" maxHeight="700px" />
                     <DetailImgWrapper img={Img02} height="50vw" maxHeight="550px" />

@@ -40,7 +40,7 @@ const ContentLeft = styled.div`
     height:50%;
 `
 
-const DetailFooter = ({ nextLink, scrollDelay}) => {
+const DetailFooter = ({ nextLink }) => {
     return (
         <>
                 <FooterContainer>
@@ -51,7 +51,7 @@ const DetailFooter = ({ nextLink, scrollDelay}) => {
                                 <DetailFooterContent text01="Behace" text02="Editorial Showcase" text03="Grid Based Editorial Design" />
                             </ContentLeft>
                             <ContentRight>
-                                <DerailFootrLink nextLink={nextLink} scrollDelay={scrollDelay} />
+                                <DerailFootrLink nextLink={nextLink}/>
                             </ContentRight>
                         </ContentWrappr>
                     </FooterInner>

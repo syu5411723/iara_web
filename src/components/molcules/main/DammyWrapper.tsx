@@ -1,8 +1,15 @@
-﻿import React from 'react'
+﻿import { motion } from 'framer-motion'
+import React from 'react'
 import styled from 'styled-components'
 
+const containerV ={
+    hidden:{},
+    visible: {},
+    exit: {opacity: 1, transition:{delay:0.5}}
+}
+
 const DammyWrapper = ({bgc}) => {
-    const DammyContainer = styled.div`
+    const DammyContainer = styled(motion.div)`
     width:100vw;
     height:900px;
     margin-bottom: 100vh;
@@ -11,7 +18,10 @@ const DammyWrapper = ({bgc}) => {
 
     return (
         <>
-            <DammyContainer />
+            <DammyContainer 
+                variants={containerV}
+                exit="exit"
+            />
         </>
     )
 }

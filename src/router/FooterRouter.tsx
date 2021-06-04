@@ -1,5 +1,5 @@
 ﻿import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"
 import DetailFooter from '../components/organisms/design/DetailFooter'
 import BookDetail from '../components/organisms/mainDetail/BookDetail'
@@ -14,77 +14,63 @@ import LibraryDetail from '../components/organisms/mainDetail/LibraryDetail'
 const FooterRouter = () => {
     return (
         <>
-            <AnimatePresence >
+            <AnimatePresence>
                 <Switch>
                     <Route exact path="/">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/filtro">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/museum">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/label">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/park_it">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/expo">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/library">
-                        <div style={{ display: "none" }} >
-                            <BookDetail />
-                        </div>
-                        <DetailFooter nextLink="/" scrollDelay={0} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/" />
                     </Route>
                     <Route exact path="/book_detail">
-                        <BookDetail />
-                        <DetailFooter nextLink="/filtro_detail" scrollDelay={500} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/filtro_detail" />
                     </Route>
                     <Route exact path="/filtro_detail">
-                        <FiltroDetail />
-                        <DetailFooter nextLink="/museum_detail" scrollDelay={500} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/museum_detail" />
                     </Route>
                     <Route exact path="/museum_detail">
-                        <MuseumDetail />
-                        <DetailFooter nextLink="/label_detail" scrollDelay={400} />
-                    </Route>                
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/label_detail" />
+                    </Route>
                     <Route exact path="/label_detail">
-                        <LabelDetail />
-                        <DetailFooter nextLink="/park_it_detail" scrollDelay={400} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/park_it_detail" />
                     </Route>
                     <Route exact path="/park_it_detail">
-                        <ParkDetail />
-                        <DetailFooter nextLink="/expo_detail" scrollDelay={400} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/expo_detail" />
                     </Route>
                     <Route exact path="/expo_detail">
-                        <ExpoDetail />
-                        <DetailFooter nextLink="/library_detail" scrollDelay={400} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/library_detail" />
                     </Route>
                     <Route exact path="/library_detail">
-                        <LibraryDetail />
-                        <DetailFooter nextLink="/book_detail" scrollDelay={400} />
+                        <FooterLinkRouter />
+                        <DetailFooter nextLink="/book_detail" />
                     </Route>
                 </Switch>
             </AnimatePresence>
@@ -93,3 +79,57 @@ const FooterRouter = () => {
 }
 
 export default FooterRouter
+
+export const FooterLinkRouter = () => {
+    const location = useLocation();
+    const [_, rootPath] = location.pathname.split("/");
+    return (
+        <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={rootPath} >
+            <Route exact path="/book">
+                    <BookDetail />
+                </Route>
+                <Route exact path="/filtro">
+                    <FiltroDetail />
+                </Route>
+                <Route exact path="/museum">
+                    <MuseumDetail />
+                </Route>
+                <Route exact path="/label">
+                    <LabelDetail />
+                </Route>
+                <Route exact path="/park_it">
+                    <ParkDetail />
+                </Route>
+                <Route exact path="/expo">
+                    <ExpoDetail />
+                </Route>
+                <Route exact path="/library">
+                    <LibraryDetail />
+                </Route>
+                <Route exact path="/book_detail">
+                    <BookDetail />
+                </Route>
+                <Route exact path="/filtro_detail">
+                    <FiltroDetail />
+                </Route>
+                <Route exact path="/museum_detail">
+                    <MuseumDetail />
+                </Route>
+                <Route exact path="/label_detail">
+                    <LabelDetail />
+                </Route>
+                <Route exact path="/park_it_detail">
+                    <ParkDetail />
+                </Route>
+                <Route exact path="/expo_detail">
+                    <ExpoDetail />
+                </Route>
+                <Route exact path="/library_detail">
+                    <LibraryDetail />
+                </Route>
+            </Switch>
+        </AnimatePresence>
+    )
+
+}

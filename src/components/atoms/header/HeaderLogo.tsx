@@ -1,7 +1,6 @@
 ﻿import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import DelayLink from "react-delay-link"
 
 const LogoContainer = styled.div``
 const Logo = styled(Link)`
@@ -19,9 +18,7 @@ const HeaderLogo = ({setColor}) => {
     return (
         <>
             <LogoContainer onClick={scrollTop} >
-                <Logo to="#" >
-                    <DelayLink delay={550} to="/" >iara gurinspun</DelayLink>
-                </Logo>
+                    <Logo to="/" >iara gurinspun</Logo>
             </LogoContainer>
         </>
     )
