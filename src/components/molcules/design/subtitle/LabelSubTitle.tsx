@@ -14,7 +14,7 @@ const Line = styled(motion.div)`
     height: 1px;
     background-color:#000;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 `
 const lineV = {
     hidden:{width:"0%"},

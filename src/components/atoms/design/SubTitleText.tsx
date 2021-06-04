@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Item = styled(motion.h2)`
-    font-size: 32px;
+    font-size: 40px;
     font-weight:100;
     font-family: 'Lora', serif;
 `
